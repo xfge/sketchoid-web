@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}Search Result{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link href="{{ url_for('static', filename='css/demo.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/icons.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+    <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Search Result</h1>
+        <p class="lead">The most similar GUIs with their related resource files are listed below.</p>
+    </div>
+
+    <div class="album">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                    <div class="card mb-4 shadow-sm text-center">
+                        <div class="card-header">
+                            <h5 class="my-0 font-weight-normal">Input Sketch</h5>
+                        </div>
+                        <div class="card-body">
+                            <p><img src="{{ url_for('static', filename=sketch_src) }}"
+                                    style="max-width: 100%"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                {% for layout in layouts %}
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-body">
+                                <p><i class="material-icons">insert_chart</i> Rank <span
+                                        class="badge badge-success">{{ layout['id'] }}</span></p>
+                                <img src="{{ url_for('static', filename=layout['img_src']) }}" style="max-width: 100%">
+                                <p class="card-text"><i class="material-icons">android</i>
+                                    <span>{{ layout['app_id'] }}</span></p>
+                                <p class="card-text"><i class="material-icons">ballot</i> {{ layout['file_name'] }}.xml
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Download</button>
+                                    <small class="text-muted"><i class="material-icons">mood</i> {{ layout['score'] }} %
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

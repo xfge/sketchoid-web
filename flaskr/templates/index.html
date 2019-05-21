@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto">
+        <h1 class="display-5 text-center">Android GUI Search Using Hand-drawn Sketches</h1>
+        <h4 class="mt-4 text-center">Xiaofei GE</h4>
+        <h6 class="mb-4 text-center">State Key Laboratory for Novel Software Technology, Nanjing University, China</h6>
+        <hr>
+        <p>Graphical User Interface (GUI) is crucial to mobile apps. In the early stages of app development, having
+            access to similar app GUIs can help designers and programmers gain information on how to improve their own
+            GUI design or identify potential reuses of existing resources. However, existing GUI search tools are
+            cumbersome for the early stage conceptualization of GUI development. In this paper, we propose Sketchoid, a
+            GUI search approach to facilitate the conceptualization process of GUI development. Sketchoid is supported
+            with our newly proposed, intuitive and lightweight Sketch Modeling Language (SML), which can be used by
+            users to draw sketches (images) of their desired GUIs by hand. SML supports commonly used GUI components.
+            Sketchoid can then automatically recognize such sketches and transform them into SML models (XML files),
+            using computer vision algorithms. Taking as input the sketchy design of an app GUI (manifested in an SML
+            model), Sketchoid leverages the neural machine translation technique to generate its GUI skeleton from the
+            SML model and then calculates the structural similarity between it and ones in a GUI layout repository,
+            which was constructed by static extraction from 10,560 apps. When the similarity computation is completed,
+            each of the most relevant GUIs along with its app information, XML files, and other related resources will
+            be returned. We conducted a user experiment with 10 participants and found that 87.5% of the search results
+            contained at least one relevant GUI. Participants agreed that the information provided by Sketchoid was
+            useful for their GUI development.</p>
+        <p class="lead">Click <a href="{{ url_for('search.demo') }}">here</a> to access the searching demo.</p>
+    </div>
+
+{% endblock %}

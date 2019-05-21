@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Demo{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link href="{{ url_for('static', filename='css/demo.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/icons.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+    <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Start a search</h1>
+        <p class="lead">Choose one of the following demo sketches to start a GUI search.</p>
+    </div>
+
+    <div class="album py-5">
+        <div class="container">
+            <div class="row">
+                {% for sketch in sketches %}
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm text-center">
+                            <div class="card-header">
+                                <h5 class="my-0 font-weight-normal">Demo {{ sketch['id'] }}</h5>
+                            </div>
+                            <div class="card-body">
+                                <p><img src="{{ url_for('static', filename=sketch['img_src']) }}"
+                                        style="max-width: 100%"></p>
+                                <a class="btn btn-block btn-outline-primary"
+                                   href="{{ url_for('search.searching', sketch_id=sketch['id']) }}">Search</a>
+                            </div>
+                            <div class="card-footer">
+                                <p class="card-text"><i class="material-icons">style</i>
+                                    <span>{{ sketch['scenario'] }}</span></p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

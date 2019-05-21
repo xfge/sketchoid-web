@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Searching{% endblock %}
+
+{% block content %}
+    <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Searching ...</h1>
+        <div class="py-5">
+            <div class="progress" style="height: 20px;">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                     aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="progress-bar">
+                </div>
+            </div>
+        </div>
+        <p class="lead">The search result will be presented upon the matching is over.</p>
+    </div>
+{% endblock %}
+
+{% block script %}
+    {{ super() }}
+    <script>
+        function countdown(callback) {
+            let bar = document.getElementById('progress-bar'),
+                time = 0, max = 5,
+                int = setInterval(function () {
+                    let percent = Math.floor(100 * time++ / max) + '%';
+                    bar.style.width = percent;
+                    bar.innerHTML = percent;
+                    if (time - 1 === max) {
+                        clearInterval(int);
+                        callback && setTimeout(callback, 600);
+                    }
+                }, 1000);
+        }
+
+        countdown(function () {
+            window.location.href = "/result/{{ sketch_id }}";
+        });
+    </script>
+{% endblock %}
