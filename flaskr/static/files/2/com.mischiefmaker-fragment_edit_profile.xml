@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/fragment_edit_profile_0" android:background="@mipmap/bg_login"
+                android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/header" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="@color/white" android:text="Edit Profile" style="@style/HeaderTextStyle"/>
+        <ImageView android:id="@id/back" android:padding="18.0dip" android:layout_width="56.0dip"
+                   android:layout_height="56.0dip" android:src="@mipmap/icon_back_white"/>
+    </RelativeLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="56.0dip" android:layout_centerInParent="true">
+        <RelativeLayout android:orientation="vertical" android:id="@id/mainRR" android:paddingBottom="40.0dip"
+                        android:layout_width="fill_parent" android:layout_height="wrap_content"
+                        android:layout_marginTop="35.0dip">
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical"
+                          android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:layout_marginTop="45.0dip" style="@style/AuthLayout">
+                    <LinearLayout android:layout_marginTop="90.0dip" style="@style/AuthSingleFieldLLStyle">
+                        <EditText android:textSize="14.0sp" android:id="@id/usernameET_SignUp"
+                                  android:nextFocusDown="@id/emailET_SignUp" android:hint="Username"
+                                  android:singleLine="true" android:inputType="text" android:imeOptions="actionNext"
+                                  style="@style/AuthEditTextStyle"/>
+                        <ImageView android:layout_width="0.0dip" android:layout_height="25.0dip"
+                                   android:src="@mipmap/icon_user_name" android:layout_weight="1.0"/>
+                    </LinearLayout>
+                    <LinearLayout style="@style/AuthSingleFieldLLStyle">
+                        <TextView android:textSize="14.0sp" android:textColor="@color/colorBlack"
+                                  android:id="@id/emailET_SignUp" android:text="Email Address"
+                                  android:scrollHorizontally="true" android:singleLine="true"
+                                  style="@style/AuthEditTextStyle"/>
+                        <ImageView android:padding="4.0dip" android:layout_width="0.0dip"
+                                   android:layout_height="25.0dip" android:src="@mipmap/icon_email"
+                                   android:layout_weight="1.0"/>
+                    </LinearLayout>
+                    <LinearLayout style="@style/AuthSingleFieldLLStyle">
+                        <EditText android:textSize="14.0sp" android:id="@id/contact_SignUp"
+                                  android:nextFocusDown="@id/phoneET_SignUp" android:hint="Contact No"
+                                  android:singleLine="true" android:maxLength="17" android:inputType="phone"
+                                  android:imeOptions="actionNext" style="@style/AuthEditTextStyle"/>
+                        <ImageView android:padding="4.0dip" android:layout_width="0.0dip"
+                                   android:layout_height="25.0dip" android:src="@mipmap/icon_mobile"
+                                   android:layout_weight="1.0"/>
+                    </LinearLayout>
+                    <LinearLayout android:visibility="gone" style="@style/AuthSingleFieldLLStyle">
+                        <EditText android:id="@id/passET_SignUp" android:nextFocusDown="@id/confirm_passET_SignUp"
+                                  android:hint="Change Password" android:inputType="textPassword"
+                                  android:imeOptions="actionNext" style="@style/AuthEditTextStyle"/>
+                        <ImageView android:layout_width="0.0dip" android:layout_height="25.0dip"
+                                   android:src="@mipmap/icon_password_gray" android:layout_weight="1.0"/>
+                    </LinearLayout>
+                    <Button android:id="@id/updateProfileBtn" android:layout_marginBottom="20.0dip"
+                            android:text="Update" style="@style/AuthLoginBtnStyle"/>
+                </LinearLayout>
+            </LinearLayout>
+            <com.joooonho.SelectableRoundedImageView android:id="@id/profileImage" android:layout_width="90.0dip"
+                                                     android:layout_height="90.0dip" android:src="@mipmap/dummy_profile"
+                                                     android:layout_centerHorizontal="true"
+                                                     app:sriv_border_color="@color/white" app:sriv_border_width="4.0dip"
+                                                     app:sriv_oval="true"/>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

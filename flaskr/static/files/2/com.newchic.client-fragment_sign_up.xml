@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+                xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/include_sign_up_account" android:layout_width="fill_parent" android:layout_height="58.0dip"
+             android:layout_marginTop="18.0dip" layout="@layout/layout_user_account"/>
+    <include android:id="@id/include_sign_up_password" android:layout_width="fill_parent"
+             android:layout_height="58.0dip" android:layout_below="@id/include_sign_up_account"
+             layout="@layout/layout_user_password"/>
+    <include android:id="@id/include_sign_up_password_again" android:layout_width="fill_parent"
+             android:layout_height="58.0dip" android:layout_below="@id/include_sign_up_password"
+             layout="@layout/layout_user_password_again"/>
+    <include android:id="@id/include_sign_up_verify_code" android:visibility="gone" android:layout_width="fill_parent"
+             android:layout_height="58.0dip" android:layout_below="@id/include_sign_up_password_again"
+             layout="@layout/layout_user_verify_code"/>
+    <LinearLayout android:gravity="start" android:orientation="horizontal" android:id="@id/layout_license"
+                  android:layout_width="fill_parent" android:layout_height="wrap_content"
+                  android:layout_marginTop="12.0dip" android:layout_below="@id/include_sign_up_verify_code"
+                  android:paddingStart="@dimen/dp_16" android:paddingEnd="@dimen/dp_16">
+        <android.support.v7.widget.AppCompatImageView android:id="@id/ivLicense" android:layout_width="wrap_content"
+                                                      android:layout_height="wrap_content"
+                                                      android:src="@drawable/cb_rect_pink_selector"
+                                                      android:contentDescription="@string/image_view"
+                                                      android:paddingStart="2.0dip" android:paddingEnd="8.0dip"/>
+        <android.support.v7.widget.AppCompatTextView android:textSize="12.0sp"
+                                                     android:textColor="@color/common_black_99_color"
+                                                     android:layout_gravity="center_vertical" android:id="@id/tvLicense"
+                                                     android:layout_width="wrap_content"
+                                                     android:layout_height="wrap_content"
+                                                     android:text="@string/gdpr_register_agree"/>
+    </LinearLayout>
+    <android.support.v7.widget.AppCompatButton android:textSize="15.0sp" android:textStyle="bold"
+                                               android:textColor="@color/white" android:gravity="center"
+                                               android:id="@id/btn_sign_up"
+                                               android:background="@drawable/btn_product_add_to_bag"
+                                               android:layout_width="fill_parent" android:layout_height="42.0dip"
+                                               android:layout_marginTop="20.0dip" android:text="@string/btn_txt_sign_up"
+                                               android:layout_below="@id/layout_license" android:textDirection="locale"
+                                               android:textAlignment="center" android:layout_marginStart="@dimen/dp_16"
+                                               android:layout_marginEnd="@dimen/dp_16"/>
+</RelativeLayout>

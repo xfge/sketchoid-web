@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView style="@style/ScreenScroller"
+                                            xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout style="@style/ScreenContainer">
+        <android.support.v7.widget.CardView style="@style/Card">
+            <LinearLayout style="@style/CardContainer">
+                <LinearLayout style="@style/InputRow">
+                    <ImageView app:srcCompat="@drawable/vector_flag_european_union" style="@style/InputIcon"/>
+                    <TextView android:text="@string/shoe_size_europe" style="@style/InputLabel"/>
+                    <Spinner android:id="@id/eu" style="@style/InputField"/>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView style="@style/Card">
+            <LinearLayout style="@style/CardContainer">
+                <LinearLayout style="@style/InputRow">
+                    <ImageView app:srcCompat="@drawable/vector_flag_united_states" style="@style/InputIcon"/>
+                    <TextView android:text="@string/shoe_size_united_states" style="@style/InputLabel"/>
+                    <Spinner android:id="@id/us" style="@style/InputField"/>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView style="@style/Card">
+            <LinearLayout style="@style/CardContainer">
+                <LinearLayout style="@style/InputRow">
+                    <ImageView app:srcCompat="@drawable/vector_flag_united_kingdom" style="@style/InputIcon"/>
+                    <TextView android:text="@string/shoe_size_united_kingdom" style="@style/InputLabel"/>
+                    <Spinner android:id="@id/uk" style="@style/InputField"/>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView style="@style/Card">
+            <LinearLayout style="@style/CardContainer">
+                <LinearLayout style="@style/InputRow">
+                    <ImageView app:srcCompat="@drawable/vector_flag_japan" style="@style/InputIcon"/>
+                    <TextView android:text="@string/shoe_size_japan" style="@style/InputLabel"/>
+                    <Spinner android:id="@id/jpn" style="@style/InputField"/>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

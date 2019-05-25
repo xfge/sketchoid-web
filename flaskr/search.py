@@ -26,15 +26,9 @@ def searching(sketch_id):
 def result(sketch_id):
     db = get_db()
     layouts = db.execute(
-        'SELECT l.id, app_id, file_name, img_src, score'
+        'SELECT l.rank, app_id, file_name, img_src, score'
         ' FROM layout l'
         ' WHERE l.sketch_id = ?',
         (sketch_id,)
     ).fetchall()
-    sketch_src = db.execute(
-        'SELECT s.img_src'
-        ' FROM sketch s'
-        ' WHERE s.id = ?',
-        (sketch_id,)
-    ).fetchone()
-    return render_template('search/result.html', sketch_src=sketch_src[0], layouts=layouts)
+    return render_template('search/result.html', sketch_id=sketch_id, layouts=layouts)

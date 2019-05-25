@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout n1:orientation="vertical" n1:background="@color/white" n1:layout_width="fill_parent"
+              n1:layout_height="fill_parent"
+              xmlns:n1="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.Toolbar n1:id="@id/toolbar" n1:background="@color/colorPrimary"
+                                       n1:layout_width="fill_parent" n1:layout_height="?actionBarSize"
+                                       n2:contentInsetLeft="0.0dip" n2:contentInsetStart="0.0dip"
+                                       n2:contentInsetStartWithNavigation="0.0dip" n2:navigationIcon="@mipmap/icon_back"
+                                       n2:popupTheme="@style/AppTheme.PopupOverlay"
+                                       n2:theme="@style/ToolbarColoredBackArrow"
+                                       xmlns:n2="http://schemas.android.com/apk/res-auto">
+        <TextView n1:textColor="@color/white" n1:id="@id/tvTitle" n1:text="@string/txt_about"
+                  style="@style/tv_header_title"/>
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout n1:orientation="horizontal" n1:id="@id/llAboutDeal" n1:background="?selectableItemBackground"
+                  n1:paddingTop="@dimen/_15sdp" n1:paddingBottom="@dimen/_15sdp" n1:layout_width="fill_parent"
+                  n1:layout_height="wrap_content" n1:paddingStart="@dimen/_25sdp" n1:paddingEnd="0.0dip">
+        <ImageView n1:layout_gravity="center_vertical" n1:layout_width="@dimen/_20sdp" n1:layout_height="@dimen/_20sdp"
+                   n1:src="@drawable/ic_about"/>
+        <TextView n1:textSize="@dimen/_15sdp" n1:textColor="@color/black" n1:layout_gravity="center_vertical"
+                  n1:id="@id/tvAboutDeal" n1:text="@string/txt_about_deal" n1:layout_marginStart="@dimen/_15sdp"
+                  style="@style/tv_chat_name"/>
+    </LinearLayout>
+    <View n1:background="@color/gray_50" n1:layout_width="fill_parent" n1:layout_height="2.0px"/>
+    <LinearLayout n1:orientation="horizontal" n1:id="@id/llTerms" n1:background="?selectableItemBackground"
+                  n1:paddingTop="@dimen/_15sdp" n1:paddingBottom="@dimen/_15sdp" n1:layout_width="fill_parent"
+                  n1:layout_height="wrap_content" n1:paddingStart="@dimen/_25sdp" n1:paddingEnd="0.0dip">
+        <ImageView n1:layout_gravity="center_vertical" n1:layout_width="@dimen/_20sdp" n1:layout_height="@dimen/_20sdp"
+                   n1:src="@drawable/ic_terms_services"/>
+        <TextView n1:textSize="@dimen/_15sdp" n1:textColor="@color/black" n1:layout_gravity="center_vertical"
+                  n1:id="@id/tvTerms" n1:text="@string/txt_terms" n1:layout_marginStart="@dimen/_15sdp"
+                  style="@style/tv_chat_name"/>
+    </LinearLayout>
+    <View n1:background="@color/gray_50" n1:layout_width="fill_parent" n1:layout_height="2.0px"/>
+    <LinearLayout n1:orientation="horizontal" n1:id="@id/llPrivacy" n1:background="?selectableItemBackground"
+                  n1:paddingTop="@dimen/_15sdp" n1:paddingBottom="@dimen/_15sdp" n1:layout_width="fill_parent"
+                  n1:layout_height="wrap_content" n1:paddingStart="@dimen/_25sdp" n1:paddingEnd="0.0dip">
+        <ImageView n1:layout_gravity="center_vertical" n1:layout_width="@dimen/_20sdp" n1:layout_height="@dimen/_20sdp"
+                   n1:src="@drawable/ic_shield"/>
+        <TextView n1:textSize="@dimen/_15sdp" n1:textColor="@color/black" n1:layout_gravity="center_vertical"
+                  n1:id="@id/tvPrivacy" n1:text="@string/txt_privacy_policy" n1:layout_marginStart="@dimen/_15sdp"
+                  style="@style/tv_chat_name"/>
+    </LinearLayout>
+    <View n1:background="@color/gray_50" n1:layout_width="fill_parent" n1:layout_height="2.0px"/>
+    <LinearLayout n1:orientation="horizontal" n1:id="@id/llFeedback" n1:background="?selectableItemBackground"
+                  n1:paddingTop="@dimen/_15sdp" n1:paddingBottom="@dimen/_15sdp" n1:layout_width="fill_parent"
+                  n1:layout_height="wrap_content" n1:paddingStart="@dimen/_25sdp" n1:paddingEnd="0.0dip">
+        <ImageView n1:layout_gravity="center_vertical" n1:layout_width="@dimen/_20sdp" n1:layout_height="@dimen/_20sdp"
+                   n1:src="@drawable/ic_feedback"/>
+        <TextView n1:textSize="@dimen/_15sdp" n1:textColor="@color/black" n1:layout_gravity="center_vertical"
+                  n1:id="@id/tvFeedback" n1:text="@string/txt_feedback" n1:layout_marginStart="@dimen/_15sdp"
+                  style="@style/tv_chat_name"/>
+    </LinearLayout>
+</LinearLayout>

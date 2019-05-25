@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:tag="layout/fragment_information_0" android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:tag="binding_1" android:background="@color/white"
+                  android:paddingBottom="@dimen/_40dp" android:layout_width="fill_parent"
+                  android:layout_height="wrap_content" android:layout_marginTop="@dimen/_20dp">
+        <android.support.constraint.ConstraintLayout android:tag="binding_2" android:layout_width="fill_parent"
+                                                     android:layout_height="@dimen/_120dp">
+            <android.support.v7.widget.AppCompatImageView android:layout_width="fill_parent"
+                                                          android:layout_height="fill_parent" android:scaleType="fitXY"
+                                                          app:layout_constraintBottom_toBottomOf="parent"
+                                                          app:layout_constraintEnd_toEndOf="parent"
+                                                          app:layout_constraintStart_toStartOf="parent"
+                                                          app:layout_constraintTop_toTopOf="parent"
+                                                          app:srcCompat="@drawable/food_life_style"/>
+            <android.support.v7.widget.AppCompatTextView
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" android:textStyle="bold"
+                    android:textColor="@color/white" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_10dp"
+                    android:layout_marginTop="@dimen/_10dp" android:text="@string/food_life_style"
+                    app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+        </android.support.constraint.ConstraintLayout>
+        <include android:id="@id/native_ad" layout="@layout/native_ad_container"/>
+        <android.support.constraint.ConstraintLayout android:tag="binding_3" android:layout_width="fill_parent"
+                                                     android:layout_height="@dimen/_120dp"
+                                                     android:layout_marginTop="@dimen/_20dp">
+            <android.support.v7.widget.AppCompatImageView android:layout_width="fill_parent"
+                                                          android:layout_height="fill_parent" android:scaleType="fitXY"
+                                                          app:layout_constraintBottom_toBottomOf="parent"
+                                                          app:layout_constraintEnd_toEndOf="parent"
+                                                          app:layout_constraintStart_toStartOf="parent"
+                                                          app:layout_constraintTop_toTopOf="parent"
+                                                          app:srcCompat="@drawable/tips_motivation"/>
+            <android.support.v7.widget.AppCompatTextView
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" android:textStyle="bold"
+                    android:textColor="@color/white" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_10dp"
+                    android:layout_marginTop="@dimen/_10dp" android:text="@string/benefits"
+                    app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+        </android.support.constraint.ConstraintLayout>
+        <Button android:textSize="24.0sp" android:textColor="@android:color/white" android:id="@id/remove_ads"
+                android:background="@color/colorPrimary" android:layout_width="fill_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="@dimen/_20dp"
+                android:text="@string/remove_adsss" android:contentDescription="@string/start_text"
+                android:fontFamily="@font/roboto_medium" app:layout_constraintBottom_toBottomOf="parent"/>
+        <android.support.constraint.ConstraintLayout android:tag="binding_4" android:layout_width="fill_parent"
+                                                     android:layout_height="@dimen/_120dp"
+                                                     android:layout_marginTop="@dimen/_20dp">
+            <android.support.v7.widget.AppCompatImageView android:layout_width="fill_parent"
+                                                          android:layout_height="fill_parent" android:scaleType="fitXY"
+                                                          app:layout_constraintBottom_toBottomOf="parent"
+                                                          app:layout_constraintEnd_toEndOf="parent"
+                                                          app:layout_constraintStart_toStartOf="parent"
+                                                          app:layout_constraintTop_toTopOf="parent"
+                                                          app:srcCompat="@drawable/caution"/>
+            <android.support.v7.widget.AppCompatTextView
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" android:textStyle="bold"
+                    android:textColor="@color/white" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_10dp"
+                    android:layout_marginTop="@dimen/_10dp" android:text="@string/common_mistakes"
+                    app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+        </android.support.constraint.ConstraintLayout>
+        <android.support.constraint.ConstraintLayout android:tag="binding_5" android:layout_width="fill_parent"
+                                                     android:layout_height="@dimen/_120dp"
+                                                     android:layout_marginTop="@dimen/_20dp">
+            <android.support.v7.widget.AppCompatImageView android:layout_width="fill_parent"
+                                                          android:layout_height="fill_parent" android:scaleType="fitXY"
+                                                          app:layout_constraintBottom_toBottomOf="parent"
+                                                          app:layout_constraintEnd_toEndOf="parent"
+                                                          app:layout_constraintStart_toStartOf="parent"
+                                                          app:layout_constraintTop_toTopOf="parent"
+                                                          app:srcCompat="@drawable/more_workout_card"/>
+            <android.support.v7.widget.AppCompatTextView
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" android:textStyle="bold"
+                    android:textColor="@color/white" android:id="@id/more_workouts_title"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10dp" android:layout_marginTop="@dimen/_10dp"
+                    android:text="@string/more_workouts" app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            <android.support.v7.widget.AppCompatTextView
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" android:textColor="@color/black"
+                    android:id="@id/ad" android:background="@drawable/round_white_card"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5dp" android:text=" AD "
+                    app:layout_constraintBottom_toBottomOf="@id/more_workouts_title"
+                    app:layout_constraintStart_toEndOf="@id/more_workouts_title"
+                    app:layout_constraintTop_toTopOf="@id/more_workouts_title"/>
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

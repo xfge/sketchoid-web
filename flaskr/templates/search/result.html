@@ -24,7 +24,7 @@
                             <h5 class="my-0 font-weight-normal">Input Sketch</h5>
                         </div>
                         <div class="card-body">
-                            <p><img src="{{ url_for('static', filename=sketch_src) }}"
+                            <p><img src="{{ url_for('static', filename='img/sketch/' + sketch_id|string + '.jpg') }}"
                                     style="max-width: 100%"></p>
                         </div>
                     </div>
@@ -35,17 +35,29 @@
                     <div class="col-md-4">
                         <div class="card mb-4 shadow-sm">
                             <div class="card-body">
-                                <p><i class="material-icons">insert_chart</i> Rank <span
-                                        class="badge badge-success">{{ layout['id'] }}</span></p>
-                                <img src="{{ url_for('static', filename=layout['img_src']) }}" style="max-width: 100%">
-                                <p class="card-text"><i class="material-icons">android</i>
-                                    <span>{{ layout['app_id'] }}</span></p>
+                                <p><i class="material-icons">insert_chart</i> Rank {{ layout['rank'] }}</p>
+
+                                <img class="my-3" src="{{ url_for('static', filename=layout['img_src']) }}"
+                                     style="max-width: 100%; height: 500px;">
+
+                                <p class="card-text"><i class="material-icons">android</i> {{ layout['app_id'] }}</p>
+
                                 <p class="card-text"><i class="material-icons">ballot</i> {{ layout['file_name'] }}.xml
                                 </p>
+
+                                <p class="card-text"><i class="material-icons">mood</i> {{ layout['score'] }} %</p>
+
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Download</button>
-                                    <small class="text-muted"><i class="material-icons">mood</i> {{ layout['score'] }} %
-                                    </small>
+                                    <a role="button" class="btn btn-sm btn-primary"
+                                       href="https://www.apkmonk.com/app/{{ layout['app_id'] }}">
+                                        <i class="material-icons">get_app</i> APK
+                                    </a>
+                                    <a role="button" class="btn btn-sm btn-outline-secondary"
+                                       href="{{ url_for('static', filename='files/' + sketch_id|string + '/' + layout['app_id'] + '-' + layout['file_name'] + '.xml') }}"
+                                       download>
+                                        <i class="material-icons">get_app</i> Layout File
+                                    </a>
+
                                 </div>
                             </div>
                         </div>

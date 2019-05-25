@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical"
+              android:background="@android:color/white" android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/toolbar"/>
+    <LinearLayout android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0dip"
+                  android:layout_height="0.0dip"/>
+    <TextView android:textSize="24.0sp" android:textColor="@color/main_color" android:layout_width="fill_parent"
+              android:layout_height="wrap_content" android:layout_marginLeft="20.0dip"
+              android:layout_marginTop="20.0dip" android:layout_marginRight="20.0dip"
+              android:layout_marginBottom="10.0dip" android:text="@string/about_more"/>
+    <TextView android:textSize="@dimen/text_size_lm" android:textColor="@color/main_color"
+              android:layout_width="fill_parent" android:layout_height="wrap_content"
+              android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip"
+              android:layout_marginBottom="20.0dip" android:text="@string/full_fill_profile"/>
+    <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+        <android.support.design.widget.TextInputLayout android:id="@id/sign_up_birthday_layout"
+                                                       android:layout_width="fill_parent"
+                                                       android:layout_height="wrap_content"
+                                                       android:layout_marginLeft="20.0dip"
+                                                       android:layout_marginRight="20.0dip">
+            <android.support.design.widget.TextInputEditText android:textSize="@dimen/text_size_lm"
+                                                             android:textColor="@color/black_222222"
+                                                             android:textColorHint="@color/gray_e6e6e6"
+                                                             android:id="@id/sign_up_birthday_input"
+                                                             android:layout_width="fill_parent"
+                                                             android:layout_height="wrap_content"
+                                                             android:hint="@string/birthday"
+                                                             android:inputType="textEmailAddress"/>
+        </android.support.design.widget.TextInputLayout>
+        <ImageView android:layout_width="15.0dip" android:layout_height="15.0dip" android:layout_marginLeft="-50.0dip"
+                   android:layout_marginTop="25.0dip" android:src="@drawable/right_arrow"
+                   android:layout_toRightOf="@id/sign_up_birthday_layout"/>
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+        <android.support.design.widget.TextInputLayout android:id="@id/sign_up_gender_layout"
+                                                       android:layout_width="fill_parent"
+                                                       android:layout_height="wrap_content"
+                                                       android:layout_marginLeft="20.0dip"
+                                                       android:layout_marginTop="10.0dip"
+                                                       android:layout_marginRight="20.0dip">
+            <android.support.design.widget.TextInputEditText android:textSize="@dimen/text_size_lm"
+                                                             android:textColor="@color/black_222222"
+                                                             android:textColorHint="@color/gray_e6e6e6"
+                                                             android:id="@id/sign_up_gender_input"
+                                                             android:layout_width="fill_parent"
+                                                             android:layout_height="wrap_content"
+                                                             android:hint="@string/gender"/>
+        </android.support.design.widget.TextInputLayout>
+        <ImageView android:layout_width="15.0dip" android:layout_height="15.0dip" android:layout_marginLeft="-50.0dip"
+                   android:layout_marginTop="35.0dip" android:src="@drawable/right_arrow"
+                   android:layout_toRightOf="@id/sign_up_gender_layout"/>
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+        <android.support.design.widget.TextInputLayout android:id="@id/sign_up_location_layout"
+                                                       android:layout_width="fill_parent"
+                                                       android:layout_height="wrap_content"
+                                                       android:layout_marginLeft="20.0dip"
+                                                       android:layout_marginTop="10.0dip"
+                                                       android:layout_marginRight="20.0dip">
+            <android.support.design.widget.TextInputEditText android:textSize="@dimen/text_size_lm"
+                                                             android:textColor="@color/black_222222"
+                                                             android:textColorHint="@color/gray_e6e6e6"
+                                                             android:id="@id/sign_up_location_input"
+                                                             android:layout_width="fill_parent"
+                                                             android:layout_height="wrap_content"
+                                                             android:hint="@string/location"/>
+        </android.support.design.widget.TextInputLayout>
+        <ImageView android:layout_width="15.0dip" android:layout_height="15.0dip" android:layout_marginLeft="-50.0dip"
+                   android:layout_marginTop="35.0dip" android:src="@drawable/right_arrow"
+                   android:layout_toRightOf="@id/sign_up_location_layout"/>
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+        <android.support.design.widget.TextInputLayout android:id="@id/sign_up_interested_in_layout"
+                                                       android:layout_width="fill_parent"
+                                                       android:layout_height="wrap_content"
+                                                       android:layout_marginLeft="20.0dip"
+                                                       android:layout_marginTop="10.0dip"
+                                                       android:layout_marginRight="20.0dip">
+            <android.support.design.widget.TextInputEditText android:textSize="@dimen/text_size_lm"
+                                                             android:textColor="@color/black_222222"
+                                                             android:textColorHint="@color/gray_e6e6e6"
+                                                             android:id="@id/sign_up_interested_in_input"
+                                                             android:layout_width="fill_parent"
+                                                             android:layout_height="wrap_content"
+                                                             android:hint="@string/interested_in"/>
+        </android.support.design.widget.TextInputLayout>
+        <ImageView android:layout_width="15.0dip" android:layout_height="15.0dip" android:layout_marginLeft="-50.0dip"
+                   android:layout_marginTop="35.0dip" android:src="@drawable/right_arrow"
+                   android:layout_toRightOf="@id/sign_up_interested_in_layout"/>
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/text_size_lm" android:textColor="@android:color/white" android:gravity="center"
+              android:id="@id/about_more_next_button" android:background="@drawable/layout_button_main_color"
+              android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+              android:layout_marginLeft="20.0dip" android:layout_marginTop="30.0dip"
+              android:layout_marginRight="20.0dip" android:text="@string/next" android:textAllCaps="false"/>
+</LinearLayout>

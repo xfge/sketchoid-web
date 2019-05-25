@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/fontFragment" android:background="@android:color/white"
+                android:layout_width="fill_parent" android:layout_height="fill_parent"
+                xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/light_gray4" android:id="@id/txtTheme" android:layout_width="wrap_content"
+              android:layout_height="wrap_content" android:layout_marginLeft="13.0dip"
+              android:layout_marginTop="15.0dip" android:text="@string/theme" android:layout_alignParentLeft="true"
+              android:layout_alignParentTop="true"/>
+    <RadioGroup android:orientation="horizontal" android:id="@id/radioDayNight" android:visibility="visible"
+                android:layout_width="fill_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="8.0dip" android:layout_marginRight="13.0dip"
+                android:layout_below="@id/txtTheme" android:layout_alignLeft="@id/txtTheme">
+        <RadioButton android:id="@id/button_day" android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" android:layout_marginRight="-1.0px" android:checked="true"
+                     android:text="@string/day" style="@style/GridRadioButton"/>
+        <RadioButton android:id="@id/button_night" android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" android:layout_marginRight="-1.0px"
+                     android:text="@string/night" style="@style/GridRadioButton"/>
+        <RadioButton android:id="@id/button_auto" android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" android:text="@string/auto" style="@style/GridRadioButton"/>
+    </RadioGroup>
+    <TextView android:textColor="@color/light_gray4" android:id="@id/txtSleep" android:layout_width="wrap_content"
+              android:layout_height="wrap_content" android:layout_marginTop="19.0dip" android:text="@string/sleep_timer"
+              android:layout_below="@id/radioDayNight" android:layout_alignLeft="@id/txtTheme"/>
+    <include android:id="@id/sleepTimerLayout" android:layout_width="wrap_content" android:layout_height="wrap_content"
+             android:layout_marginTop="8.0dip" android:layout_below="@id/txtSleep"
+             android:layout_alignLeft="@id/txtSleep" android:layout_alignRight="@id/fontSizeLayout"
+             layout="@layout/sleep_timer"/>
+    <com.faithcomesbyhearing.android.bibleis.widgets.CustomSeekBar android:id="@id/seekSleepTimerActive"
+                                                                   android:background="@drawable/sleep_timer_background"
+                                                                   android:paddingLeft="10.0dip"
+                                                                   android:paddingTop="@dimen/sleep_timer_top_padding"
+                                                                   android:paddingRight="26.0dip"
+                                                                   android:paddingBottom="@dimen/sleep_timer_bottom_padding"
+                                                                   android:visibility="gone"
+                                                                   android:layout_width="fill_parent"
+                                                                   android:layout_height="@dimen/sleep_timer_height"
+                                                                   android:layout_marginTop="8.0dip"
+                                                                   android:layout_marginRight="13.0dip"
+                                                                   android:maxHeight="@dimen/sleep_timer_height"
+                                                                   android:max="3600"
+                                                                   android:progressDrawable="@drawable/seek_bar_filled"
+                                                                   android:minHeight="@dimen/sleep_timer_height"
+                                                                   android:thumb="@drawable/scrubber_pill"
+                                                                   android:thumbOffset="-10.0dip"
+                                                                   android:layout_below="@id/txtSleep"
+                                                                   android:layout_alignLeft="@id/txtSleep"/>
+    <TextView android:textColor="@color/light_gray4" android:id="@id/txtFont" android:layout_width="wrap_content"
+              android:layout_height="wrap_content" android:layout_marginTop="@dimen/txt_font_top_margin"
+              android:text="@string/font" android:layout_below="@id/sleepTimerLayout"
+              android:layout_alignLeft="@id/txtSleep"/>
+    <RadioGroup android:orientation="horizontal" android:id="@id/radioFont" android:visibility="visible"
+                android:layout_width="fill_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="8.0dip" android:layout_marginRight="13.0dip"
+                android:layout_below="@id/txtFont" android:layout_alignLeft="@id/txtFont">
+        <RadioButton android:id="@id/button_sans_serif" android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" android:layout_marginRight="-1.0px" android:checked="true"
+                     android:text="@string/sans_serif" android:layout_weight="0.7" style="@style/GridRadioButton"/>
+        <RadioButton android:id="@id/button_serif" android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" android:text="@string/serif" android:layout_weight="1.0"
+                     style="@style/GridRadioButton"/>
+    </RadioGroup>
+    <RelativeLayout android:id="@id/custom_font_display" android:background="@drawable/grid_radio_button_background"
+                    android:visibility="visible" android:layout_width="fill_parent" android:layout_height="34.0dip"
+                    android:layout_marginTop="8.0dip" android:layout_marginRight="13.0dip"
+                    android:layout_below="@id/txtFont" android:layout_alignLeft="@id/txtFont">
+        <TextView android:textColor="@color/font_text_color" android:id="@id/text_custom_font_name"
+                  android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <TextView android:textColor="@color/light_gray4" android:id="@id/txtFontSize" android:layout_width="wrap_content"
+              android:layout_height="wrap_content" android:layout_marginTop="19.0dip" android:text="@string/text_size"
+              android:layout_below="@id/radioFont" android:layout_alignLeft="@id/txtFont"/>
+    <include android:id="@id/fontSizeLayout" android:layout_width="wrap_content" android:layout_height="wrap_content"
+             android:layout_marginTop="8.0dip" android:layout_marginRight="13.0dip"
+             android:layout_below="@id/txtFontSize" android:layout_alignLeft="@id/txtFontSize"
+             layout="@layout/font_size"/>
+</RelativeLayout>

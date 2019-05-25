@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+              android:layout_weight="1.0"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent"
+              android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:text="@string/iAm"
+              android:layout_weight="1.0" style="@style/infoLabel"/>
+    <RadioGroup android:orientation="horizontal" android:id="@id/iAm" android:layout_width="fill_parent"
+                android:layout_height="wrap_content" android:layout_marginLeft="0.0dip" android:layout_weight="1.0">
+        <RadioButton android:tag="male" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                     android:text="@string/male"/>
+        <RadioButton android:id="@id/genderSelfWomen" android:tag="female" android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" android:layout_marginRight="5.0dip"
+                     android:text="@string/female"/>
+    </RadioGroup>
+    <TextView android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+              android:layout_marginLeft="5.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="5.0dip"
+              android:text="@string/iSearch" android:layout_weight="1.0" style="@style/infoLabel"/>
+    <RadioGroup android:orientation="horizontal" android:id="@id/iSearch" android:layout_width="fill_parent"
+                android:layout_height="wrap_content" android:layout_marginLeft="0.0dip" android:layout_weight="1.0">
+        <RadioButton android:id="@id/genderSearchMen" android:tag="male" android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" android:layout_marginRight="5.0dip"
+                     android:text="@string/aMen"/>
+        <RadioButton android:id="@id/genderSearchWomen" android:tag="female" android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" android:layout_marginRight="5.0dip"
+                     android:text="@string/aWoman"/>
+        <RadioButton android:tag="all" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                     android:text="@string/indifferent"/>
+    </RadioGroup>
+    <Button android:id="@id/next" android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip" android:layout_marginTop="30.0dip" android:layout_marginRight="5.0dip"
+            android:text="@string/next" android:onClick="next" style="@style/col_button"/>
+</LinearLayout>

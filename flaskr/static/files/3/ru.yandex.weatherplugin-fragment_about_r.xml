@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/divider_message"
+              android:layout_width="fill_parent" android:layout_height="fill_parent"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.cleanmaster.main.view.CustomToolbarLayout android:id="@id/custom_toolbar_layout"
+                                                   android:background="@color/activity_theme"
+                                                   android:layout_width="fill_parent"
+                                                   android:layout_height="wrap_content"/>
+    <View android:background="@color/divider" android:layout_width="fill_parent" android:layout_height="1.0px"/>
+    <View android:background="@color/divider" android:layout_width="fill_parent" android:layout_height="1.0px"
+          android:layout_marginTop="20.0dip"/>
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent"
+                  android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal"
+                      android:paddingLeft="@dimen/activity_hor_padding"
+                      android:paddingRight="@dimen/activity_hor_padding" android:layout_width="fill_parent"
+                      android:layout_height="@dimen/settings_view1_height">
+            <TextView android:textSize="@dimen/font_size_middle" android:textColor="@color/text_default_color"
+                      android:layout_width="0.0dip" android:layout_height="wrap_content"
+                      android:text="@string/message_rubbish_clean" android:layout_weight="1.0"/>
+            <android.support.v7.widget.AppCompatImageView android:id="@id/message_clean_check"
+                                                          android:layout_width="@dimen/switched_width"
+                                                          android:layout_height="@dimen/switched_height"
+                                                          app:srcCompat="@drawable/switched_selector"/>
+        </LinearLayout>
+        <View android:background="@color/divider" android:layout_width="fill_parent" android:layout_height="1.0px"
+              android:layout_marginLeft="@dimen/activity_hor_padding"
+              android:layout_marginRight="@dimen/activity_hor_padding"/>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal"
+                      android:id="@id/message_interval_view" android:background="@drawable/square_click_bg_selector"
+                      android:paddingLeft="@dimen/activity_hor_padding"
+                      android:paddingRight="@dimen/activity_hor_padding" android:layout_width="fill_parent"
+                      android:layout_height="@dimen/settings_view1_height">
+            <TextView android:textSize="@dimen/font_size_middle" android:textColor="@color/text_default_color"
+                      android:layout_width="0.0dip" android:layout_height="wrap_content"
+                      android:text="@string/message_remind_interval" android:layout_weight="1.0"/>
+            <TextView android:textSize="@dimen/font_size_small" android:textColor="@color/text_small_color"
+                      android:id="@id/message_interval_time" android:layout_width="wrap_content"
+                      android:layout_height="wrap_content" android:text="@android:string/unknownName"/>
+            <android.support.v7.widget.AppCompatImageView android:layout_width="@dimen/slidingmenu_icon_size"
+                                                          android:layout_height="@dimen/slidingmenu_icon_size"
+                                                          app:srcCompat="@drawable/vector_arrow_right"/>
+        </LinearLayout>
+        <View android:background="@color/divider" android:layout_width="fill_parent" android:layout_height="1.0px"
+              android:layout_marginLeft="@dimen/activity_hor_padding"
+              android:layout_marginRight="@dimen/activity_hor_padding"/>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal"
+                      android:id="@id/message_storage_view" android:paddingLeft="@dimen/activity_hor_padding"
+                      android:paddingRight="@dimen/activity_hor_padding" android:layout_width="fill_parent"
+                      android:layout_height="@dimen/settings_view1_height">
+            <TextView android:textSize="@dimen/font_size_middle" android:textColor="@color/text_default_color"
+                      android:layout_width="0.0dip" android:layout_height="wrap_content"
+                      android:text="@string/message_storage_remind" android:layout_weight="1.0"/>
+            <android.support.v7.widget.AppCompatImageView android:id="@id/message_storage_check"
+                                                          android:layout_width="@dimen/switched_width"
+                                                          android:layout_height="@dimen/switched_height"
+                                                          app:srcCompat="@drawable/switched_selector"/>
+        </LinearLayout>
+        <View android:background="@color/divider" android:layout_width="fill_parent" android:layout_height="1.0px"
+              android:layout_marginLeft="@dimen/activity_hor_padding"
+              android:layout_marginRight="@dimen/activity_hor_padding"/>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal"
+                      android:paddingLeft="@dimen/activity_hor_padding"
+                      android:paddingRight="@dimen/activity_hor_padding" android:layout_width="fill_parent"
+                      android:layout_height="@dimen/settings_view1_height">
+            <TextView android:textSize="@dimen/font_size_middle" android:textColor="@color/text_default_color"
+                      android:layout_width="0.0dip" android:layout_height="wrap_content"
+                      android:text="@string/settings_display_notifi" android:layout_weight="1.0"/>
+            <android.support.v7.widget.AppCompatImageView android:id="@id/message_notifi_check"
+                                                          android:layout_width="@dimen/switched_width"
+                                                          android:layout_height="@dimen/switched_height"
+                                                          app:srcCompat="@drawable/switched_selector"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="@color/divider" android:layout_width="fill_parent" android:layout_height="1.0px"/>
+</LinearLayout>
